@@ -1,0 +1,79 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="7">
+            <item index="0" class="java.lang.String" itemvalue="nobr" />
+            <item index="1" class="java.lang.String" itemvalue="noembed" />
+            <item index="2" class="java.lang.String" itemvalue="comment" />
+            <item index="3" class="java.lang.String" itemvalue="noscript" />
+            <item index="4" class="java.lang.String" itemvalue="embed" />
+            <item index="5" class="java.lang.String" itemvalue="script" />
+            <item index="6" class="java.lang.String" itemvalue="javascript" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PyCompatibilityInspection" enabled="false" level="WARNING" enabled_by_default="false">
+      <option name="ourVersions">
+        <value>
+          <list size="2">
+            <item index="0" class="java.lang.String" itemvalue="2.7" />
+            <item index="1" class="java.lang.String" itemvalue="3.11" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="7">
+            <item index="0" class="java.lang.String" itemvalue="flask" />
+            <item index="1" class="java.lang.String" itemvalue="openai" />
+            <item index="2" class="java.lang.String" itemvalue="pydantic" />
+            <item index="3" class="java.lang.String" itemvalue="pymongo" />
+            <item index="4" class="java.lang.String" itemvalue="proto-plus" />
+            <item index="5" class="java.lang.String" itemvalue="typing_extensions" />
+            <item index="6" class="java.lang.String" itemvalue="attrs" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="E402" />
+          <option value="E501" />
+          <option value="E701" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N812" />
+          <option value="N803" />
+          <option value="N806" />
+          <option value="N801" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="botengage.healthcheck.HealthCheck" />
+          <option value="botengage.healthcheck.*" />
+          <option value="flask.ext.login" />
+          <option value="importlib.machinery" />
+          <option value="dict.add" />
+          <option value="str.text" />
+          <option value="int.__setitem__" />
+          <option value="list.__getitem__" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
