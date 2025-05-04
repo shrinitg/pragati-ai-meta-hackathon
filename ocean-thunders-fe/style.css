@@ -1,0 +1,376 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f3f4f6;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .chat-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+  }
+
+  .chat-header {
+    padding: 1rem;
+    background-color: white;
+    border-bottom: 1px solid #e5e7eb;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .logo {
+    background-color: #dbeafe;
+    color: #2563eb;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+  }
+
+  .title-container h1 {
+    font-size: 1.25rem;
+    color: #111827;
+    margin-bottom: 0.25rem;
+  }
+
+  .title-container p {
+    font-size: 0.75rem;
+    color: #6b7280;
+  }
+
+  .connection-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    background-color: #f3f4f6;
+  }
+
+  .status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #9ca3af;
+  }
+
+  .status-dot.connected {
+    background-color: #34d399;
+    position: relative;
+  }
+
+  .status-dot.connected::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #34d399;
+    animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  @keyframes ping {
+    75%, 100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+
+  .messages-container {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+  }
+
+  .welcome-message {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .welcome-icon {
+    width: 64px;
+    height: 64px;
+    background-color: #dbeafe;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    color: #2563eb;
+    font-size: 1.5rem;
+  }
+
+  .welcome-message h3 {
+    color: #111827;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .welcome-message p {
+    color: #6b7280;
+    max-width: 24rem;
+  }
+
+  .message {
+    display: flex;
+    margin-bottom: 1rem;
+    align-items: flex-start;
+  }
+
+  .message.user {
+    flex-direction: row-reverse;
+  }
+
+  .message-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    flex-shrink: 0;
+  }
+
+  .message.assistant .message-avatar {
+    background-color: #dbeafe;
+    color: #2563eb;
+    margin-right: 0.75rem;
+  }
+
+  .message.user .message-avatar {
+    background-color: #2563eb;
+    color: white;
+    margin-left: 0.75rem;
+  }
+
+  .message-content {
+    max-width: 75%;
+    padding: 0.75rem 1rem;
+    border-radius: 1rem;
+  }
+
+  .message.assistant .message-content {
+    background-color: #f3f4f6;
+    color: #111827;
+    border-top-left-radius: 0;
+  }
+
+  .message.user .message-content {
+    background-color: #2563eb;
+    color: white;
+    border-top-right-radius: 0;
+  }
+
+  .message-timestamp {
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+  }
+
+  .message.assistant .message-timestamp {
+    color: #6b7280;
+  }
+
+  .message.user .message-timestamp {
+    color: #bfdbfe;
+  }
+
+  .chat-input-form {
+    padding: 1rem;
+    border-top: 1px solid #e5e7eb;
+    background-color: white;
+  }
+
+  .input-container {
+    display: flex;
+    align-items: center;
+    background-color: #f3f4f6;
+    border-radius: 9999px;
+    padding: 0.5rem 1rem;
+    transition: all 0.2s;
+  }
+
+  .input-container:focus-within {
+    background-color: white;
+    box-shadow: 0 0 0 2px #bfdbfe;
+  }
+
+  #messageInput {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 0.5rem 0;
+    outline: none;
+    font-size: 1rem;
+    color: #111827;
+  }
+
+  #messageInput::placeholder {
+    color: #9ca3af;
+  }
+
+  .button-container {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  /* Mic Button */
+  .mic-button {
+    background-color: #ffffff;
+    color: #4b5563;
+    border: 1px solid #d1d5db;
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  }
+
+  .mic-button:hover {
+    background-color: #e5e7eb;
+    transform: scale(1.1); /* Slight scaling effect */
+  }
+
+  .mic-button.recording {
+    background-color: #fee2e2;
+    color: #dc2626;
+    border: 1px solid #dc2626;
+  }
+
+  .mic-button.recording:hover {
+    background-color: #fcd5d5;
+    transform: scale(1.1); /* Slight scaling effect */
+  }
+
+  .mic-icon {
+    font-size: 1.25rem; /* Increase the size of the mic icon */
+    transition: color 0.2s ease;
+  }
+
+  .mic-button.recording .mic-icon {
+    color: #dc2626; /* Red color when recording */
+  }
+
+  /* Send Button */
+  .send-button {
+    background-color: #2563eb;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+  }
+
+  .send-button:hover {
+    background-color: #1d4ed8;
+    transform: scale(1.1); /* Slight scaling effect */
+  }
+
+  .send-button:disabled {
+    background-color: #d1d5db;
+    cursor: not-allowed;
+    opacity: 0.6; /* Dim the button when disabled */
+  }
+
+  /* Send Icon */
+  .send-icon {
+    font-size: 1.25rem; /* Increase the size of the send icon */
+    transition: color 0.2s ease;
+  }
+
+  .send-button:not(:disabled) .send-icon {
+    color: white; /* Default color */
+  }
+
+  .send-button:disabled .send-icon {
+    color: #9ca3af; /* Light gray color for disabled state */
+  }
+
+  .typing-indicator {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 0.5rem;
+  }
+
+  .typing-indicator .message-avatar {
+    background-color: #dbeafe;
+    color: #2563eb;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+  }
+
+  .typing-indicator .typing-dots {
+    display: flex;
+    gap: 0.3rem;
+  }
+
+  .typing-indicator .dot {
+    width: 8px;
+    height: 8px;
+    background-color: #9ca3af;
+    border-radius: 50%;
+    animation: typing 1.2s infinite ease-in-out;
+  }
+
+  .typing-indicator .dot:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  .typing-indicator .dot:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+
+  @keyframes typing {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }

@@ -1,0 +1,26 @@
+version: '2'
+distribution_spec:
+  description: Use Groq for running LLM inference
+  providers:
+    inference:
+    - remote::groq
+    safety:
+    - inline::llama-guard
+    vector_io:
+    - inline::faiss
+    agents:
+    - inline::meta-reference
+    eval:
+    - inline::meta-reference
+    datasetio:
+    - inline::localfs
+    scoring:
+    - inline::basic
+    telemetry:
+    - inline::meta-reference
+    tool_runtime:
+    - remote::brave-search
+    - remote::tavily-search
+    - inline::code-interpreter
+    - inline::rag-runtime
+image_type: conda
