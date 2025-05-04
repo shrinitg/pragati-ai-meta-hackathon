@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healthcare Assistant Chat Interface</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="chat-container">
+    <header class="chat-header">
+      <div class="header-content">
+        <div class="logo-container">
+          <div class="logo">HC</div>
+          <div class="title-container">
+            <h1>ArogyaMitra</h1>
+            <p>Available 24/7 for your health questions</p>
+          </div>
+        </div>
+        <div class="connection-status">
+          <span class="status-dot"></span>
+          <span class="status-text">Connecting...</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="messages-container">
+      <div class="welcome-message">
+        <div class="welcome-icon">
+          <span>?</span>
+        </div>
+        <h3>Healthcare Assistant</h3>
+        <p>How are you feeling today? Ask me any health-related questions or concerns.</p>
+      </div>
+    </div>
+
+    <form class="chat-input-form">
+      <div class="input-container">
+        <input
+          type="text"
+          id="messageInput"
+          placeholder="Type your message here..."
+          autocomplete="off"
+        >
+        <div class="button-container">
+          <button type="button" class="mic-button" aria-label="Toggle microphone">
+            <span class="mic-icon">🎤</span>
+          </button>
+          <button type="submit" class="send-button" aria-label="Send message" disabled>
+            <span class="send-icon">➤</span>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
