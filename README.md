@@ -1,5 +1,5 @@
 
-🌊 Ocean Thunders - Pragati AI Hackathon 2025 🚀
+# 🌊 Ocean Thunders - Pragati AI Hackathon 2025 🚀
 
 Welcome to the official repository of Team Ocean Thunders for the Pragati AI Hackathon 2025!
 
