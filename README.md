@@ -61,7 +61,7 @@ A fork of Meta’s llama-stack (v0.1.1) to create a modular agentic framework.
 
 🛠 How to Run
 
-`1. Install Anaconda
+1. Install Anaconda
 
 2. Navigate to the llama-stack directory 
    1. cd llama-stack
@@ -75,7 +75,7 @@ A fork of Meta’s llama-stack (v0.1.1) to create a modular agentic framework.
 5. Run the stack server 
    1. llama stack run llama_stack/templates/groq/run.yaml --image-name groq --port 5001 --disable-ipv6 --env GROQ_API_KEY=<your_api_key>
 
-📍 Server runs at localhost:5001`
+📍 Server runs at localhost:5001
 
 <br>
 
@@ -91,7 +91,7 @@ Backend server responsible for:
 ⚙️ How to Run
 
 
-`1. cd ocean-thunder-be
+1. cd ocean-thunder-be
 
 2. Create virtual environment 
    1. python3 -m venv venv
@@ -104,7 +104,9 @@ Backend server responsible for:
 4. (Optional) Generate SSL certificates
 
 5. Run the backend 
-   1. uvicorn oceanthundersbe:app --host 0.0.0.0 --port 443 --ssl-keyfile=key.pem --ssl-certfile=cert.pem`
+   1. uvicorn oceanthundersbe:app --host 0.0.0.0 --port 443 --ssl-keyfile=key.pem --ssl-certfile=cert.pem
+
+6. Please make sure to update the host, access_token(s), ket(s) in costants.py file.
 
 📍 Backend available at https://localhost:443
 
@@ -117,10 +119,10 @@ Frontend UI built with HTML, CSS, and JS for real-time interaction with the back
 
 🌐 How to Run
 
-`1. cd ocean-thunder-fe
+1. cd ocean-thunder-fe
 
 2. Run a local web server 
-   1. python -m http.server 7001`
+   1. python -m http.server 7001
 
 📍 Frontend served at http://localhost:7001
 
