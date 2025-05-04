@@ -5,12 +5,15 @@ Welcome to the official repository of Team Ocean Thunders for the Pragati AI Hac
 
 Our project 💡 ArogyaMitra is an AI-powered, advanced multi-agentic healthcare assistant system built to empower users with seamless access to medical services.
 
+<br>
+
 # 👥 Team Members - 
 
 🧠 [Shrinit Goyal](https://www.linkedin.com/in/shrinitg/)
 
 ⚙️ [Shivansh Singh](https://www.linkedin.com/in/shivansh-singh-a5b45a215/)
 
+<br>
 
 # 🏥 What is ArogyaMitra?
 
@@ -28,6 +31,7 @@ Our project 💡 ArogyaMitra is an AI-powered, advanced multi-agentic healthcare
     
     🔹 Locate hospitals nearby
 
+<br>
 
 # 🧠 System Architecture
 
@@ -35,6 +39,7 @@ Here’s the high-level architecture diagram of our system:
 
 ![img.png](img.png)
 
+<br>
 
 # 🧪 Prototype Snapshots
 
@@ -42,10 +47,13 @@ Some glimpses of the working prototype:
 
 ![img_4.png](img_4.png)![img_1.png](img_1.png)![img_2.png](img_2.png)![img_3.png](img_3.png)
 
+<br>
 
 # 📂 Repository Structure
 
 This monorepo is split into 3 main components:
+
+<br>
 
 # 1️⃣ llama-stack 🦙
 
@@ -68,6 +76,8 @@ A fork of Meta’s llama-stack (v0.1.1) to create a modular agentic framework.
    1. llama stack run llama_stack/templates/groq/run.yaml --image-name groq --port 5001 --disable-ipv6 --env GROQ_API_KEY=<your_api_key>
 
 📍 Server runs at localhost:5001`
+
+<br>
 
 
 # 2️⃣ ocean-thunder-be 🧠
@@ -98,6 +108,7 @@ Backend server responsible for:
 
 📍 Backend available at https://localhost:443
 
+<br>
 
 
 # 3️⃣ ocean-thunder-fe 🎨
@@ -113,6 +124,7 @@ Frontend UI built with HTML, CSS, and JS for real-time interaction with the back
 
 📍 Frontend served at http://localhost:7001
 
+<br>
 
 # 🤖 Technologies & Tools Used
 
@@ -126,7 +138,7 @@ Frontend UI built with HTML, CSS, and JS for real-time interaction with the back
 | Hosting & Infra        | ☁️ E2E Cloud, InfinityFree         |
 | Real-Time Interactions | 🔄 WebSocket, In-Memory DB Classes |
 
-
+<br>
 
 # ✅ Final Thoughts
 
